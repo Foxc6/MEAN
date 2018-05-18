@@ -1,0 +1,28 @@
+<script>
+mySll = function(){
+	this.head = null;
+}	
+
+node1 = function(val){
+	this.val = val
+	this.next = null
+}
+
+sll.prototpype.add(){
+	var myNode = new Node(val);
+	if(!this.head){
+		this.head = myNode;
+	}else{
+		var cur = this.head;
+		while(cur.next){
+			cur = cur.next
+		}
+		cur.next += myNode
+	}
+}
+
+
+
+
+
+</script>
