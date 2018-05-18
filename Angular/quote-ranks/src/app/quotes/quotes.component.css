@@ -1,0 +1,35 @@
+div{
+	outline: 1px solid black;
+	width: 1000px;
+	height: 200px;
+}
+
+p{
+	width: 800px;
+}
+button{
+	color: white;
+	width: 150px;
+	height: 30px;
+}
+
+textarea{
+	height: 120px;
+	width: 800px;
+	display: block;
+}
+input{
+	display: block;
+}
+
+.up{
+	background-color: green;
+}
+
+.down{
+	background-color: red;
+}
+
+.delete{
+	background-color: black;
+}

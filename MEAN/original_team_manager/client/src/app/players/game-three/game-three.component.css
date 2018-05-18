@@ -1,0 +1,27 @@
+a{
+	font-size: 30px;
+	margin-right: 15px;
+}
+
+.first-link{
+	border-right: solid black 2px;
+	padding-right: 15px;
+}
+
+.not-selected{
+	background-color: #CCCCCC;
+}
+
+.playing{
+	background-color: green;
+	color: white;
+}
+
+.not-playing{
+	background-color: red;
+	color: white;
+}
+
+.undecided{
+	background-color: yellow;
+}

@@ -1,0 +1,51 @@
+<script>
+class Ninja {
+    constructor(name, health=100, speed=3, strength=3){
+        this.name = name;
+        this.health = health;
+        this.speed = speed;
+        this.strength = strength;
+    }
+    // prototype method
+    sayName(){
+        console.log(this.name);
+    }
+    showStats(){
+        console.log("Health: " + this.health);
+        console.log("Speed: " + this.speed);
+        console.log("Strength: " + this.strength);
+    }
+    drinkSake(){
+        this.health += 10;
+    }
+    punch(ninja){
+        if(ninja.constructor.name != "Ninja"){
+            console.log("You must pass in a Ninja instance in order for punch to work correctly");
+        } else {
+            ninja.health -= 5;
+            console.log(ninja.name + " was punched by " + this.name + " and lost 5 health!")
+        }
+    }
+
+    kick(ninja){
+        if(ninja.constructor.name != "Ninja"){
+            console.log("You must pass in a Ninja instance in order for kick to work correctly");
+        } else {
+            let kick_damage = 0;
+            for(let i=0; i<this.strength; i++){
+                ninja.health -= 15;
+                kick_damage += 15;
+            }
+            console.log(ninja.name + " was kicked by " + this.name + " and lost " + kick_damage + " health!");
+        }
+    }
+    
+}
+
+var ninja1 = new Ninja("Chris");
+var ninja2 = new Ninja("Justin");
+
+ninja1.kick(ninja2);
+console.log(ninja2);
+
+</script>

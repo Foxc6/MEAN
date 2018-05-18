@@ -1,0 +1,19 @@
+.note{
+	outline: solid black 1px;
+}
+
+.date{
+	margin-left: 1150px;
+}
+
+.submit-button{
+	background-color: green;
+	display: inline;
+	color: white;
+	width: 100px;
+	height: 20px;
+}
+.note-input{
+	display: inline;
+	width: 800px;
+}

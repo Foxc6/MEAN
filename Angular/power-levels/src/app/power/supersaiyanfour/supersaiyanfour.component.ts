@@ -1,0 +1,22 @@
+import { Component, OnInit, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-supersaiyanfour',
+  templateUrl: './supersaiyanfour.component.html',
+  styleUrls: ['./supersaiyanfour.component.css']
+})
+export class SupersaiyanfourComponent implements OnInit {
+	@Input() basePower
+	superSaiyanFourPower
+
+	getSuperSaiyanFourPower(){
+		this.superSaiyanFourPower = this.basePower * 500
+		return this.superSaiyanFourPower
+	}
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

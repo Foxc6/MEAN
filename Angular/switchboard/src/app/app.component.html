@@ -1,0 +1,6 @@
+<h1>{{title}}</h1>
+<div *ngFor='let button of buttons let idx = index'>
+  <button (click)='changeButton(idx)' *ngIf='button == false' style='background-color: red'>Off</button>
+  <button (click)='changeButton(idx)' *ngIf='button == true' style='background-color: green'>On</button>
+</div>
+

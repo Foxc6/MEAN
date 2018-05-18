@@ -1,0 +1,47 @@
+Black Belt Review
+
+General
+	-Practice remembering the data flow of a full MEAN project
+
+Node/Express
+-Re-learn how to setup Node/Express Project
+-Make list of required steps for future referance
+	Modularization
+		Controllers
+			-Learn how to create/setup
+			-Learn how to link
+		Models
+			-Learn how to create/setup
+			-Learn how to link
+		Config
+			Routes
+				-Learn how to create/setup
+				-Learn how to link
+			Mongoose
+				-Learn how to create/setup
+				-Learn how to link
+
+Mongoose
+	-Practice basic CRUD operations
+	-Practice how to handle the asynch calls
+	-Practice model(collection) associations
+
+Angular
+	Routing
+		-Learn how to use routing with params (e.g. localhost:8000/user/1)
+	Services
+		-Practice using a Service to talk to the backend (e.g. use API calls)
+
+
+Preperation
+	Files
+		-Create list of files that can be copied over
+		-Create the files to be copied over
+
+	Imports
+		-Create a list of needed imports and what they do
+		-Create copies of imports so that they can be copied
+
+	Console
+		-Create list of console commands for each piece of the MEAN project and what they do
+		-Create a file with copies of these commands and the order to do them in

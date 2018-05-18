@@ -1,0 +1,14 @@
+<body>
+	<h1>Edit Animal</h1>
+	<form action='/to_show_animals' method='post'>
+		<button>Show All Animals</button>
+	</form>
+
+	<form action='/edit_animal/<%=animal._id%>' method='post'>
+		Name: <input type='text' name='name' value=<%= animal.name %>><br>
+		Number of Legs: <input type="text" name="num_legs" value=<%= animal.num_legs %>><br>
+		Animal Type: <input type="text" name="animal_type" value=<%= animal.animal_type %>><br>
+		Animal Age: <input type='text' name='age' value=<%= animal.age %>><br>
+		<button name='submit'>Update Animal</button>
+	</form>
+</body>

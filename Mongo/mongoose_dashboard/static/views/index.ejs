@@ -1,0 +1,27 @@
+<body>
+	<h1>All Animals</h1>
+	<form action='to_new_animal' method='post'>
+		<button>Add New Animal</button>
+	</form>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Legs</th>
+			<th>Type</th>
+			<th>Age</th>
+		</tr>
+		<% for(let i=0; i<animals.length; i++) { %>
+		<tr>
+			<td><%= animals[i].name %></td>
+			<td><%= animals[i].num_legs %></td>
+			<td><%= animals[i].animal_type %></td>
+			<td><%= animals[i].age %></td>
+			<td><button><a href='edit/<%=animals[i]._id%>'>Edit</a></button></td>
+			<td><button><a href='show/<%=animals[i]._id%>'>Show</a></button></td>
+			<form action='/destroy/<%=animals[i]._id%>' method='post'>
+				<td><input type='submit' value='delete'></td>
+			</form>
+		</tr>
+		<% } %>
+	</table>
+</body>

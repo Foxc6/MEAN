@@ -1,0 +1,13 @@
+<p>power works!</p>
+<form (submit)="onSubmit()">
+  <input type="number" name="level" [(ngModel)]="power.level">
+  <input type="submit">
+</form>
+{{ basePower | json }}
+
+<app-human [basePower]='basePower'></app-human>
+<app-saiyan [basePower]='basePower'></app-saiyan>
+<app-supersaiyan [basePower]='basePower'></app-supersaiyan>
+<app-supersaiyantwo [basePower]='basePower'></app-supersaiyantwo>
+<app-supersaiyanthree [basePower]='basePower'></app-supersaiyanthree>
+<app-supersaiyanfour [basePower]='basePower'></app-supersaiyanfour>

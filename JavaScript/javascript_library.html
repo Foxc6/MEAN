@@ -1,0 +1,54 @@
+<script>
+var _ = {
+    map: function(arr, num) {
+      var result = [];
+      for(let i=0; i<arr.length; i++){
+        result.push(arr[i] * num); 
+      }
+      return result;
+   },
+   reduce: function(arr) { 
+     var result = 0;
+      for(let i=0; i<arr.length; i++){
+        result += arr[i];
+      }
+      return result;
+   },
+   find: function(arr) {   
+     var result;
+      for(let i=0; i<arr.length; i++){
+        if((arr[i] % 2) == 0){
+          result = arr[i];
+          return result;
+        }
+      }
+   },
+   filter: function(arr) { 
+     var result = [];
+      for(let i=0; i<arr.length; i++){
+        if(arr[i] % 2 != 0){
+          result.push(arr[i]);
+        }
+      }
+      return result;
+   },
+   reject: function(arr) { 
+     var result = [];
+      for(let i=0; i<arr.length; i++){
+        if(arr[i] % 2 != 0){
+          i++;
+        }
+        result.push(arr[i]);
+      }
+      return result;
+   }
+ }
+
+array = [1,2,3,4,5]
+num = 2;
+console.log(_.map(array, num));
+console.log(_.reduce(array));
+console.log(_.find(array));
+console.log(_.filter(array));
+console.log(_.reject(array));
+</script>

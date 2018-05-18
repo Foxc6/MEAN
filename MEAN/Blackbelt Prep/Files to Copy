@@ -1,0 +1,10 @@
+Files to Copy
+* Indicates files that will need to be modified (e.g. specific routes, specific attributes for models, etc.) and are listed to help remind which imports are needed
+
+Server
+	Config
+		* routes.js (routes should be changed)
+		* mongoose.js (database_name needs to be changed)
+	*Controllers
+
+	*Models

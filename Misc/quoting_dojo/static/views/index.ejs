@@ -1,0 +1,11 @@
+<body>
+	<h1>Here are the awesome quotes!</h1>
+	<form action='/go_home' method='post' >
+		<button name='submit'>Back</button>
+	</form>
+	<% for(quote of quotes) { %>
+		<p>"<%= quote.content %>"</p>
+		<p>&emsp; - <%= quote.author %> at <%= quote.date %></p>
+		<hr>
+	<% } %>
+</body>

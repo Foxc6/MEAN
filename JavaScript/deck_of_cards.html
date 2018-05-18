@@ -1,0 +1,91 @@
+<script>
+	class Card{
+		constructor(val, suit){
+			this.val = val;
+			this.suit = suit;
+		}
+	}
+
+	class Deck{
+		constructor(deck = []){
+			this.deck = deck;
+		}
+
+		generateDeck(){
+			var values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace'];
+			var suits = ['Spades', 'Hearts', 'Diamonds', 'Clubs'];
+			for(let i=0; i<suits.length; i++){
+				for(let j=0; j<values.length; j++){
+					this.deck.push(new Card(values[j], suits[i]));
+				}
+			}
+			return this;
+		}
+
+		shuffleDeck(){
+			var m = this.deck.length, t, i;
+			while (m) {
+				i = Math.floor(Math.random() * m--);
+				t = this.deck[m];
+				this.deck[m] = this.deck[i];
+				this.deck[i] = t;
+  			}
+			return this.deck;
+		}
+
+		resetDeck(){
+			this.deck = [];
+			this.generateDeck();
+			return this.deck;
+		}
+
+		dealCard(){
+			var card = this.deck[this.deck.length - 1];
+			this.deck.pop(card);
+			return card;
+		}
+	}
+
+	class Player{
+		constructor(name, hand=[]){
+			this.name = name;
+			this.hand = hand;
+		}
+
+		takeCard(deck){
+			var card = deck.dealCard();
+			console.log(card);
+			this.hand.push(card);
+			return this;
+		}
+
+		discardCard(){
+			this.hand.pop();
+			return this;
+		}
+	}
+
+deck1 = new Deck();
+deck1.generateDeck();
+deck1.shuffleDeck();
+//console.log(deck1);
+
+deck2 = new Deck();
+deck2.generateDeck();
+//console.log(deck2);
+
+deck1.dealCard();
+
+
+player1 = new Player("Chris");
+player1.takeCard(deck1);
+player1.takeCard(deck1);
+player1.takeCard(deck1);
+player1.takeCard(deck1);
+player1.takeCard(deck1);
+player1.discardCard();
+console.log(player1);
+deck1.resetDeck();
+console.log(deck1);
+
+</script>

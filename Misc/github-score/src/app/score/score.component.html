@@ -1,0 +1,12 @@
+<form (submit)='updateScore()'>
+	<input type='text' name='user_name' [(ngModel)]='user_name' #name='ngModel' required minlength='1'>
+	<input type='submit' [disabled]='!name.valid'>
+</form>
+
+<h1>Your Score: {{score}}</h1>
+<span *ngIf='score < 20' style='color: red'><h2>Needs work!</h2></span>
+<span *ngIf='score > 19 && score < 50' style='color: orange'><h2>A decent start!</h2></span>
+<span *ngIf='score > 49 && score < 100' style='color: yellow'><h2>Doing good!</h2></span>
+<span *ngIf='score > 99 && score < 200' style='color: green'><h2>Great job!</h2></span>
+<span *ngIf='score >= 200' style='color: blue'><h2>Great job!</h2></span>
+

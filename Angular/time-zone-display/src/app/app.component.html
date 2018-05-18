@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+<button (click)='showPST()'>PST</button>
+<button (click)='showMST()'>MST</button>
+<button (click)='showCST()'>CST</button>
+<button (click)='showEST()'>EST</button>
+<button (click)='clearTime()'>Clear</button>
+
+<p>{{ time | date: 'medium' }}</p>

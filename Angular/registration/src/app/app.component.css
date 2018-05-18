@@ -1,0 +1,33 @@
+label{
+	width: 150px;
+	margin-right: 10px;
+	display: inline-block;
+}
+input{
+	width: 150px;
+	display: inline-block;
+}
+span{
+	display: inline-block;
+	color: red;
+}
+div{
+	margin: 4px;
+	display: block;
+	width: 620px;
+}
+
+.radio{
+	width: auto;
+	margin-right: 0px;
+	display: inline;
+}
+.submit{
+	margin-top: 10px;
+	width: 790px;
+}
+
+.main{
+	width: 800px;
+	outline: 1px solid black;
+}

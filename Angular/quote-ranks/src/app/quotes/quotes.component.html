@@ -1,0 +1,18 @@
+<h1>Add a Quote</h1>
+<form (submit)='addQuote()'>
+	<textarea type='text' name='content' [(ngModel)]='quote.content' #content='ngModel' placeholder='Quote....' required minlength='10'></textarea>
+	<span *ngIf='content.errors' style='color: red'>Quote is required and must be longer than 10 characters!</span>
+	<input type='text' name='author' [(ngModel)]='quote.author' #author='ngModel' placeholder='Author' required minlength='1'>
+	<span *ngIf='author.errors' style='color: red'>Author is required</span>
+	<input type='submit' [disabled]='content.errors || author.errors'>
+</form>
+
+<h1>Quotes List</h1>
+<div *ngFor='let quote of quotes'>
+	<p>{{quote.content}}</p>
+	<p> &nbsp; &nbsp;-{{quote.author}}</p>
+	<h2><span *ngIf='quote.votes > 0'>+</span>{{quote.votes}}</h2>
+	<button (click)='upVote(quote)' class='up'>Vote Up</button>
+	<button (click)='downVote(quote)' class='down'>Vote Down</button>
+	<button (click)='deleteVote(quote)' class='delete'>Delete</button>
+</div>

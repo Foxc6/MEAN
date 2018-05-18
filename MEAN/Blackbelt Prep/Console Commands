@@ -1,0 +1,39 @@
+Console Commands
+// Explanation
+* Special Note
+$ COMMAND TO RUN
+
+	Node/Express
+	// Create package.json file
+	* Run below command in the project root directory
+	$ npm init -y
+	
+	// Install Express, ExpressSession BodyParser and Mongoose and save them
+	* Run below command in the project root directory
+	$ npm install express express-session body-parser mongoose --save
+
+
+
+	Mongo
+	// Start Mongo server
+	* Run below command in the computer root directory
+	$ mongod
+
+
+	Angular
+	// Create a new Angular project (called client) with routing
+	* Run below command in root directory of the Node/Express project
+	$ ng new client --routing
+
+	// Create a new Component
+	* For parent components run the below command in the Angular root directory (it will end up in src/app folder)
+	* For child components run the below command in the Parent Component root directory
+	$ ng g c {{component_name}}
+
+	// Create a Service
+	* Run the below command in the Parent Component directory
+	$ ng g service {{service_name}}
+
+	// Create a model
+	* Add the model file to the Parent Component directory
+	$ ng generate class {{class_name}}

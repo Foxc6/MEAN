@@ -1,0 +1,35 @@
+<script>
+	// PART I
+	function starString(num){
+		return "*".repeat(num);
+	}
+
+	// PART II
+	function drawStars(arr){
+		for(let i=0; i<arr.length; i++){
+			console.log("*".repeat(arr[i]));
+		}
+	}
+
+	// PART III
+	function drawStarsAndStrings(arr){
+		for(let i=0; i<arr.length; i++){
+			if(arr[i].constructor == Number){
+				console.log("*".repeat(arr[i]));
+			} else {
+				console.log((arr[i][0].repeat(arr[i].length)).toLowerCase());
+			}
+		}
+	}
+
+
+
+	// TEST CASE FOR PART I
+	// console.log(starString(8));
+
+	// TEST CASE FOR PART II
+	// drawStars([3,5,1,7,3]);
+
+	// TEST CASE FOR PART III
+	// drawStarsAndStrings([4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"]);
+</script>

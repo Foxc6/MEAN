@@ -1,0 +1,11 @@
+<form #myForm="ngForm" (submit)="addNote(); myForm.reset()">
+	<p>Note: <input class='note-input' type="text" name="content" [(ngModel)]="new_note.content" #content='ngModel' required></p>
+	<p><input class='submit-button' type="submit" value="Add Note" [disabled]="!content.valid"></p>
+</form>
+
+<div class='note' *ngFor='let note of notes'>
+	<div class='date'>
+		<p>Noted on: {{note.createdAt | date: 'medium'}}</p>
+	</div>
+	<p>{{note.content}}</p>
+</div>

@@ -1,0 +1,92 @@
+<h1>{{title}}</h1>
+<span style='color: green;' *ngIf='message==true'>Thank you for registering with us, {{user.firstName}}. We just sent you a confirmation email at {{user.email}} and we will send all mail to {{user.streetAddress}}, {{user.city}} {{user.state}}. Have a wonderful day!</span>
+<div class='main'>
+  <h3>Account Information</h3>
+  <form (submit)='onRegister()'>
+    <div>
+      <label>*First Name</label>
+      <input type='text' name='firstName' 
+      [(ngModel)]='user.firstName' 
+      #firstName='ngModel'
+      required
+      >
+      <span *ngIf='!firstName.valid'>First Name is required</span>
+    </div>
+    <div>
+      <label>*Last Name: </label>
+      <input type='text' name='lastName' 
+      [(ngModel)]='user.lastName' 
+      #lastName='ngModel'
+      required
+      >
+      <span *ngIf='!lastName.valid'>Last Name is required</span>
+    </div>
+    <div>
+      <label>*Email: </label>
+      <input type='text' name='email' 
+      [(ngModel)]='user.email' 
+      #email='ngModel'
+      pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+      required
+      >
+      <span *ngIf='!email.valid'>Email must be valid</span>
+    </div>
+    <div>
+      <label>*Password: </label>
+      <input type='text' name='password' 
+      [(ngModel)]='user.password' 
+      #password='ngModel'
+      required
+      minlength='16'
+      >
+      <span *ngIf='!password.valid'>Password must be at least 16 characters</span>
+    </div>
+    <div>
+      <label>*Confirm Password: </label>
+      <input type='text' name='confirmPassword' 
+      [(ngModel)]='user.confirmPassword' 
+      #confirmPassword='ngModel'
+      >
+      <span *ngIf='user.confirmPassword != user.password'>Passwords do not match</span>
+    </div>
+    <div>
+      <label>*Street Address</label>
+      <input type='text' name='streetAddress' 
+      [(ngModel)]='user.streetAddress' 
+      #streetAddress='ngModel'
+      required
+      >
+      <span *ngIf='!streetAddress.valid'>Street Address is required</span>
+    </div>
+    <div>
+      <label>&nbsp;&nbsp;Unit/Apt #</label>
+      <input type='text' name='unit' [(ngModel)]='user.unit' #unit='ngModel'>
+    </div>
+    <div>
+      <label>*City</label>
+      <input type='text' name='city' 
+      [(ngModel)]='user.city' 
+      #city='ngModel'
+      required
+      >
+      <span *ngIf='!city.valid'>City is required</span>
+    </div>
+    <div>
+      <label>*State</label>
+      <input type='text' name='state' 
+      [(ngModel)]='user.state' 
+      #state='ngModel'
+      required
+      >
+      <span *ngIf='!state.valid'>State is required</span>
+    </div>
+    <label>*I'm Feeling Lucky: </label>
+    Yes: <input (click)='setLuckyTrue()' class='radio' type='radio' name='user.lucky'>
+    No: <input (click)='setLuckyFalse()' class='radio' type='radio' name='user.lucky'>
+    <span *ngIf='user.lucky == null'>Choosing how you feel is required</span>
+    <div>
+      <span *ngIf='firstName.valid && lastName.valid && email.valid && password.valid && user.confirmPassword == user.password && streetAddress.valid && city.valid && state.valid && user.lucky != null'><input class='submit' type='submit'></span>
+    </div>
+  </form>
+</div>
+
